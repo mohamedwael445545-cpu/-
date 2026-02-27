@@ -1,0 +1,27 @@
+<div id="app">
+  <header>
+    <h1>🌙 متتبع العبادات</h1>
+    <nav>
+      <button onclick="showSection('prayers')" id="btn-prayers">🏠 سجل صلاتي</button>
+      <button onclick="showSection('azkar')" id="btn-azkar">📿 قسم الأذكار</button>
+    </nav>
+  </header>
+
+  <section id="prayers-section" class="active">
+    <div class="section-title">📅 جدول الصلوات الخمس</div>
+    <div class="date-picker">
+      <label>التاريخ:</label>
+      <input type="date" id="target-date" min="2026-02-28" max="2070-12-31" value="2026-02-28" onchange="loadDay()">
+    </div>
+    <div id="prayer-list" class="card-container"></div>
+  </section>
+
+  <section id="azkar-section">
+    <div class="section-title">✨ الأذكار كاملة</div>
+    <div class="tabs">
+      <button onclick="loadAzkar('morning')">☀️ أذكار الصباح</button>
+      <button onclick="loadAzkar('evening')">🌙 أذكار المساء</button>
+    </div>
+    <div id="azkar-list" class="card-container"></div>
+  </section>
+</div>
